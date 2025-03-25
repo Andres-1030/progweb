@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="principal.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Ejemplo de validaciones</h1>
+	<hr>
+
+	<form action="/" method="post">
+		<label for="Username">Usuario:</label>
+		<input type="text" name="Username" value="Andrés" placeholder="Por ejemplo, Martha" minlength="5" maxlength="40" required pattern="[A-Za-zÀ-ÿ\s]+">
+
+		
+		<label for="password">Password:</label>
+		<input type="password" name="password" value="formulario" placeholder="Contraseña" minlength="11">
+
+		<br><br/>
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
