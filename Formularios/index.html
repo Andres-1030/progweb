@@ -1,25 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="principal.css">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción Equipo de Baloncesto</title>
+  <link rel="stylesheet" href="principal.css">
 </head>
 <body>
-	<h1>Ejemplo de validaciones</h1>
-	<hr>
+  <header>
+    <h1>Inscripción Equipo de Baloncesto</h1>
+  </header>
 
-	<form action="/" method="post">
-		<label for="Username">Usuario:</label>
-		<input type="text" name="Username" value="Andrés" placeholder="Por ejemplo, Martha" minlength="5" maxlength="40" required pattern="[A-Za-zÀ-ÿ\s]+">
+  <form action="/submit" method="POST">
+    <!-- Datos Personales -->
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Andrés Isais">
 
-		
-		<label for="password">Password:</label>
-		<input type="password" name="password" value="formulario" placeholder="Contraseña" minlength="11">
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="15" max="40" required placeholder="21">
 
-		<br><br/>
-		<input type="submit" value="Enviar">
-	</form>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="983-100-1100">
+    </fieldset>
+
+    <!-- Selección de Color -->
+    <fieldset>
+      <legend>Selecciona tu color favorito</legend>
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color" value="#ff0000">
+    </fieldset>
+
+    <!-- Selección de Fecha -->
+    <fieldset>
+      <legend>Fecha de Nacimiento</legend>
+      <label for="fecha_nacimiento">Fecha:</label>
+      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+    </fieldset>
+
+    <!-- Selección de Hora -->
+    <fieldset>
+      <legend>Hora de Inscripción</legend>
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required>
+    </fieldset>
+
+    <!-- Selección de Mes -->
+    <fieldset>
+      <legend>Mes Preferido</legend>
+      <label for="mes">Mes:</label>
+      <input type="month" id="mes" name="mes" required>
+    </fieldset>
+
+    <!-- Selección de Posición -->
+    <fieldset>
+      <legend>Posición en el equipo</legend>
+      <label for="posicion">Selecciona tu posición:</label>
+      <select id="posicion" name="posicion" required>
+        <option value="base">Base</option>
+        <option value="escolta">Escolta</option>
+        <option value="alero">Alero</option>
+        <option value="pivote">Pivote</option>
+        <option value="centro">Centro</option>
+      </select>
+    </fieldset>
+
+    <!-- Barra de Progreso -->
+    <fieldset>
+      <legend>Progreso de Inscripción</legend>
+      <progress value="40" max="100"></progress>
+    </fieldset>
+
+    <!-- Aceptación de Condiciones -->
+    <fieldset>
+      <label for="aceptar">
+        <input type="checkbox" id="aceptar" name="aceptar" required>
+        Acepto los términos y condiciones
+      </label>
+    </fieldset>
+
+    <!-- Botón de Enviar -->
+    <button type="button" onclick="openConfirmation()">Enviar Inscripción</button>
+  </form>
+
+  <footer>
+    <p>&copy; 2025 Inscripción de Baloncesto</p>
+  </footer>
+
+  <script>
+    function openConfirmation() {
+      window.open("", "_blank").document.write("<h1>¡Registro Exitoso!</h1><p>Tu inscripción ha sido registrada correctamente.</p>");
+    }
+  </script>
 </body>
 </html>
