@@ -3,56 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
   <link rel="stylesheet" href="principal.css">
-  <title>Registro de Emprendedores</title>
 </head>
 <body>
-  <header>
-    <h1>Registro de Emprendedores</h1>
-  </header>
+<header>
+  <img src="image1.png" alt="Imagen de usuario" class="user-image">
+  <h1>Registro de Usuario</h1>
+</header>
 
-  <form action="/registro" method="POST">
-    <!-- Información del Negocio -->
+  <form action="/submit" method="POST">
     <fieldset>
-      <legend>Datos del Emprendimiento</legend>
-      <label for="nombre_negocio">Nombre del Negocio:</label>
-      <input type="text" id="nombre_negocio" name="nombre_negocio" required>
+      <legend>Datos Personales</legend>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Andrés Isais">
 
-      <label for="nombre_emprendedor">Nombre del Emprendedor:</label>
-      <input type="text" id="nombre_emprendedor" name="nombre_emprendedor" required>
-
-      <label for="telefono">Teléfono de Contacto:</label>
-      <input type="tel" id="telefono" name="telefono" required>
-
-      <label for="correo">Correo Electrónico:</label>
-      <input type="email" id="correo" name="correo" required>
-
-      <label for="ubicacion">Ubicación:</label>
-      <input type="text" id="ubicacion" name="ubicacion" value="Chetumal" readonly>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="312-189-4701" required>
     </fieldset>
 
-    <!-- Categoría y Descripción -->
     <fieldset>
-      <legend>Información del Producto</legend>
-      <label for="categoria">Categoría del Negocio:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="alimentos">Alimentos</option>
-        <option value="moda">Moda</option>
-        <option value="artesanias">Artesanías</option>
-        <option value="tecnologia">Tecnología</option>
-        <option value="otros">Otros</option>
-      </select>
+  <legend>Información de Cuenta</legend>
+  <label for="email">Correo Electrónico:</label>
+  <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
 
-      <label for="descripcion">Breve Descripción:</label>
-      <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-    </fieldset>
+  <label for="password">Contraseña:</label>
+  <input type="password" id="password" name="password" required minlength="8" placeholder="Mínimo 8 caracteres">
 
-    <!-- Botón de Enviar -->
-    <button type="submit">Registrar Emprendimiento</button>
+  <label for="confirmar_password">Confirmar Contraseña:</label>
+  <input type="password" id="confirmar_password" name="confirmar_password" required minlength="8" placeholder="Repite la contraseña">
+</fieldset>
+
+<fieldset>
+  <legend>Información Adicional</legend>
+  <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+  <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+</fieldset>
+
+<fieldset>
+  <legend>Verificación</legend>
+  <label for="captcha">Captcha: ¿Cuánto es 3 + 4?</label>
+  <input type="text" id="captcha" name="captcha" required pattern="7" placeholder="Responde la pregunta">
+</fieldset>
+
+
+    <button type="submit">Registrar Usuario</button>
   </form>
 
   <footer>
-    <p>&copy; 2025 Registro de Emprendedores</p>
+    <p>&copy; 2025 Registro de Usuario</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+/* Estilo para el contenedor flex */
+.contenedor {
+    display: flex;
+    width: 400px;
+    /*flex-direction: row; /* Dirección del eje principal 
+    flex-wrap: wrap;*/
+      flex-flow: row wrap;
+    background-color: #4682B4; /* Color de fondo */
+    padding: 10px;
+}
+
+/* Estilo para los ítems flexibles */
+.item {
+    background-color: orange; /* Color de fondo */
+    margin: 100px;
+    border: 5px solid black;
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Distribuye el espacio disponible equitativamente */
+}
