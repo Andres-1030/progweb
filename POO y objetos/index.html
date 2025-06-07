@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POO con JavaScript</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🧙 Crear Personaje</h1>
+    <input type="text" id="nombre" placeholder="Nombre del personaje" />
+    <select id="clase">
+      <option value="">-- Elige una clase --</option>
+      <option value="Guerrero">Guerrero</option>
+      <option value="Mago">Mago</option>
+      <option value="Arquero">Arquero</option>
+    </select>
+    <input type="number" id="nivel" placeholder="Nivel (1-100)" min="1" max="100" />
+    <button onclick="crearPersonaje()">Crear</button>
+
+    <h2>📋 Personajes creados</h2>
+    <div id="listaPersonajes" class="lista"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

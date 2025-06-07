@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uso de Clases - Vehículos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🚗 Registro de Vehículos</h1>
+    
+    <input type="text" id="marca" placeholder="Marca del vehículo">
+    <input type="text" id="modelo" placeholder="Modelo">
+    <input type="number" id="anio" placeholder="Año">
+
+    <button onclick="registrarVehiculo()">Registrar Vehículo</button>
+
+    <h2>📋 Lista de Vehículos</h2>
+    <div id="listaVehiculos" class="lista"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
